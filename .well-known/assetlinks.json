@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.privateid.golf",
+      "sha256_cert_fingerprints":
+      ["66:D7:6A:43:FD:92:D4:C7:85:D4:9C:CF:38:F0:EB:04:F4:F1:3D:85:98:DB:2D:7F:CD:26:74:BF:6E:5E:7A:78"]
+    }
+  }
+]
