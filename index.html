@@ -281,9 +281,13 @@
     .footer-inner {
       border-top: 1px solid rgba(148,163,184,0.18);
       padding-top: 2rem;
-      display: grid; gap: 1.75rem; grid-template-columns: 1fr;
+      display: grid; gap: 1.75rem; grid-template-columns: 1fr 1fr;
     }
-    @media (min-width: 768px) { .footer-inner { grid-template-columns: 1.6fr 1fr 1fr; } }
+    .footer-inner > :first-child { grid-column: 1 / -1; }
+    @media (min-width: 768px) {
+      .footer-inner { grid-template-columns: 1.6fr 1fr 1fr; }
+      .footer-inner > :first-child { grid-column: auto; }
+    }
     .footer h4 { font-size: .9rem; color: #f1f5f9; margin: 0 0 .8rem; }
     .footer-blurb { font-size: .88rem; color: var(--muted); max-width: 22rem; line-height: 1.55; margin: .5rem 0 0; }
     .footer-copy { font-size: .78rem; color: #64748b; margin-top: 1rem; }
