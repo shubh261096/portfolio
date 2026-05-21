@@ -2,97 +2,239 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Astro v4.5.4">
-    <title>Work with me - Shubham Agrawal</title>
-    <meta name="description" content="Interested in working with Shubham? Send him a message!">
-    <meta name="author" content="Shubham Agrawal"><!-- OG Tags -->
-    <meta property="og:title" content="Work with me - Shubham Agrawal">
-    <meta property="og:description" content="Interested in working with Shubham? Send him a message!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.shubhamagrawal.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work with me — Shubham Agrawal</title>
+  <meta name="description" content="Interested in working with Shubham? Send him a message!">
+  <meta name="author" content="Shubham Agrawal">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@iagrawalshubham">
-    <meta name="twitter:creator" content="@iagrawalshubham">
-    <meta name="twitter:title" content="Shubham Agrawal">
-    <meta name="twitter:description"
-        content="My thoughts and ramblings about adventures in software development and entreprenuership.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/shubh261096/portfolio/master/profile.png">
+  <meta property="og:title" content="Work with me - Shubham Agrawal">
+  <meta property="og:description" content="Interested in working with Shubham? Send him a message!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.shubhamagrawal.com/">
 
-    <link rel="image_src" href="profile.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@iagrawalshubham">
+  <meta name="twitter:creator" content="@iagrawalshubham">
+  <meta name="twitter:title" content="Shubham Agrawal">
+  <meta name="twitter:description" content="Interested in working with Shubham? Send him a message!">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/shubh261096/portfolio/master/images/profile.png">
 
-    <link rel="canonical" href="https://www.shubhamagrawal.com/">
+  <link rel="image_src" href="images/profile.png">
+  <link rel="canonical" href="https://www.shubhamagrawal.com/contact.html">
+  <link rel="icon" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
 
-    <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/anchor.css" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="anchor.css" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(148,163,184,0.15);
+      --border-strong: rgba(148,163,184,0.3);
+      --sky: #0ea5e9;
+      --cyan: #22d3ee;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(1000px 500px at 85% -10%, rgba(14,165,233,0.10), transparent 60%),
+        radial-gradient(800px 450px at -10% 10%, rgba(34,211,238,0.08), transparent 60%),
+        var(--bg);
+      min-height: 100vh;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    ::selection { background: rgba(56,189,248,0.35); color: #fff; }
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 0 1.25rem; }
+    .section { padding: 2.5rem 0; }
+
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; padding: 1.5rem 0;
+    }
+    .brand {
+      font-size: 1.25rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--sky), var(--cyan));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .nav-list {
+      display: flex; align-items: center; gap: 1.5rem;
+      list-style: none; margin: 0; padding: 0;
+      font-size: .92rem; font-weight: 500;
+    }
+    .nav-list a { color: #cbd5e1; position: relative; transition: color .2s ease; }
+    .nav-list a::after {
+      content: ""; position: absolute; left: 0; bottom: -5px; height: 2px; width: 0;
+      background: linear-gradient(90deg, var(--sky), var(--cyan));
+      transition: width .25s ease;
+    }
+    .nav-list a:hover { color: #fff; }
+    .nav-list a:hover::after { width: 100%; }
+
+    .page-title {
+      text-align: center;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800; margin: 0; line-height: 1.15;
+    }
+    .page-title .accent {
+      background: linear-gradient(135deg, var(--sky), var(--cyan));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .page-sub {
+      text-align: center; color: var(--muted); margin: .75rem auto 0;
+      max-width: 36rem; font-size: 1rem;
+    }
+
+    .grid {
+      display: grid; gap: 1.5rem; margin-top: 2.5rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 2fr 1fr; }
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(30,41,59,0.6), rgba(15,23,42,0.6));
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+    }
+    .panel h2 {
+      font-size: 1.25rem; font-weight: 700; margin: 0 0 .5rem;
+      position: relative;
+    }
+    .panel h2::after {
+      content: ""; display: block; width: 38px; height: 3px; margin-top: .5rem;
+      background: linear-gradient(90deg, var(--sky), var(--cyan));
+      border-radius: 2px;
+    }
+    .panel h3 {
+      font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 .5rem; color: #f1f5f9;
+    }
+    .panel p { margin: .75rem 0 0; line-height: 1.65; color: #cbd5e1; font-size: 1rem; }
+    .panel ul { margin: 1rem 0 0; padding-left: 1.1rem; }
+    .panel ul li { margin: .75rem 0; line-height: 1.6; color: #cbd5e1; }
+    .panel ul li strong { color: #f1f5f9; }
+    .panel a.link { color: #38bdf8; }
+    .panel a.link:hover { text-decoration: underline; }
+
+    .reach-list { display: grid; gap: .65rem; margin-top: 1.25rem; }
+    .reach-item {
+      display: flex; align-items: center; gap: .75rem;
+      padding: .8rem 1rem; border-radius: .6rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      color: var(--text); font-size: .95rem;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .reach-item:hover {
+      background: rgba(56,189,248,0.08);
+      border-color: rgba(56,189,248,0.4);
+      transform: translateY(-1px);
+    }
+    .reach-item svg { width: 1.15rem; height: 1.15rem; fill: #38bdf8; flex-shrink: 0; }
+
+    .footer { padding: 2.5rem 0 3rem; }
+    .footer-inner {
+      border-top: 1px solid rgba(148,163,184,0.18);
+      padding-top: 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      justify-content: space-between; align-items: center;
+      font-size: .85rem; color: var(--muted);
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .footer-links a { color: #cbd5e1; transition: color .2s ease; }
+    .footer-links a:hover { color: #fff; }
+  </style>
 </head>
 
-<body class="bg-slate-900 text-gray-100">
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
-        <div class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between"><a href="index.html">
-                <div
-                    class="flex items-center bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-xl font-bold text-transparent">
-                    Shubham Agrawal</div>
-            </a>
-            <nav>
-                <ul class="flex gap-x-3 font-medium text-gray-200">
-                    <li class="hover:text-white"><a
-                        href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf"
-                        target="_blank">Resume</a></li>
-                    <li class="hover:text-white"><a href="https://medium.com/@iagrawalshubham" target="_blank">Blog</a></li>
-                    <li class="hover:text-white"><a href="contact.html">Work With Me</a></li>
-                  </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
-        <h1 class="text-center text-3xl font-bold">Work with me</h1>
-        <div class="mx-auto mt-5 max-w-prose text-lg">
-            <div class="prose prose-invert mt-8 prose-img:rounded-lg prose-img:m-auto text-lg">
-                <p>I’m currently available for hire. If you’re interested in working together, you can get in touch with
-                    me via email at <a href="mailto:sa159871@gmail.com">sa159871@gmail.com</a> or through any of my
-                    socials below.</p>
-                <ul>
-                    <li><a href="https://github.com/shubh261096">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/iagrawalshubham/">LinkedIn</a></li>
-                    <li><a href="https://www.instagram.com/iagrawalshubham/">Instagram</a></li>
-                </ul>
-                <h2 id="what-can-i-help-with">What can I help with?</h2>
-                <p>I am a front-end (Android) software engineer with experience in building web applications. </p>
-                <h3 id="launch-your-product">Launch your product</h3>
-                <p>I have been launching <a href="https://github.com/shubh261096">my side projects</a> and can help you work out how
-                    to validate your ideas, what should be included in your MVPs and show you my process in how I go
-                    from idea to launch.</p>
-                <h3 id="design-and-build-your-frontend">Design and build your frontend</h3>
-                <p>Although my most recent experience has been primarily in Android, I have experience using all the
-                    different major frameworks such as <a href="https://codeigniter.com/">Codeignter</a></p>
-            </div>
-        </div>
-    </div>
-    <div class="mx-auto max-w-screen-lg px-3 py-6">
-        <div class="border-t border-gray-600 pt-5 text-sm text-gray-200 md:flex text-center">
-          <div class="flex-1 md:text-left">©<!-- --> <a class="hover:underline" href="https://shubhamagrawal.com">Shubham
-              Agrawal</a> <!-- -->2024</div>
-          <div class="flex-1 md:text-right">
-            <a class="hover:underline" href="mailto:sa159871@gmail.com">Email</a>
-            <!-- -->|<!-- -->
-            <a class="hover:underline" href="https://linktr.ee/iagrawalshubham">Linktree</a>
-            <!-- -->|<!-- -->
-            <a class="hover:underline" href="https://github.com/shubh261096">GitHub</a>
-            <!-- -->|<!-- -->
-            <a class="hover:underline" href="https://www.linkedin.com/in/iagrawalshubham/">LinkedIn</a>
-            <!-- -->|<!-- -->
-            <a class="hover:underline" href="https://www.instagram.com/iagrawalshubham/" rel="nofollow">Instagram</a>
-            <!-- -->|<!-- -->
-            <a class="hover:underline" href="https://twitter.com/iagrawalshubham">Twitter</a>
-          </div>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="index.html">Shubham Agrawal</a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#posts">Writing</a></li>
+          <li><a href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf" target="_blank">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div class="wrap section">
+    <h1 class="page-title">Let&#x27;s <span class="accent">work together</span></h1>
+    <p class="page-sub">Available for freelance, contract, and product-build collaborations.</p>
+
+    <div class="grid">
+      <div class="panel">
+        <h2>Get in touch</h2>
+        <p>
+          I&#x27;m currently available for hire. Drop me a line at
+          <a class="link" href="mailto:sa159871@gmail.com">sa159871@gmail.com</a>
+          or reach out on any of the socials.
+        </p>
+
+        <h3>What I can help with</h3>
+        <ul>
+          <li><strong>Launch your product.</strong> I&#x27;ve been shipping <a class="link" href="https://github.com/shubh261096">side projects</a>
+            for years. I can help validate an idea, scope the MVP, and walk through my idea-to-launch process.</li>
+          <li><strong>Design &amp; build your Android app.</strong> Production Android engineering with Kotlin, Jetpack Compose, and modern architecture.</li>
+          <li><strong>Web frontends &amp; small backends.</strong> Comfortable across <a class="link" href="https://codeigniter.com/">CodeIgniter</a>, PHP/MySQL, and lightweight Node setups.</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>Reach me</h2>
+        <div class="reach-list">
+          <a class="reach-item" href="mailto:sa159871@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+            Email
+          </a>
+          <a class="reach-item" href="https://github.com/shubh261096">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.96 10.96 0 015.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.74.81 1.18 1.84 1.18 3.1 0 4.44-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            GitHub
+          </a>
+          <a class="reach-item" href="https://www.linkedin.com/in/iagrawalshubham/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43a2.06 2.06 0 11.01-4.12 2.06 2.06 0 010 4.12zm-1.77 13.02h3.55V9H3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="reach-item" href="https://www.upwork.com/freelancers/~01eaa05b17a38c1092">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.91 2.36 5.296 5.271 5.296 2.91 0 5.273-2.386 5.273-5.296v-1.19c.53 1.073 1.165 2.116 1.949 3.04l-1.667 7.829h2.741l1.205-5.679c1.057.673 2.265 1.106 3.521 1.106 3.018 0 5.475-2.474 5.475-5.494.014-3.005-2.444-5.477-5.461-5.477z"/></svg>
+            Upwork
+          </a>
+          <a class="reach-item" href="https://www.instagram.com/iagrawalshubham/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.71 3.71 0 01-1.38-.9 3.71 3.71 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0-2.16C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 00-2.12 1.38A5.86 5.86 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 002.12-1.38 5.86 5.86 0 001.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 00-1.38-2.12A5.86 5.86 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zM19.85 5.6a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+            Instagram
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="wrap footer">
+    <div class="footer-inner">
+      <div>© <span id="year">2024</span> <a href="https://shubhamagrawal.com" style="color:#cbd5e1;">Shubham Agrawal</a></div>
+      <div class="footer-links">
+        <a href="mailto:sa159871@gmail.com">Email</a>
+        <a href="https://linktr.ee/iagrawalshubham">Linktree</a>
+        <a href="https://github.com/shubh261096">GitHub</a>
+        <a href="https://www.linkedin.com/in/iagrawalshubham/">LinkedIn</a>
+        <a href="https://twitter.com/iagrawalshubham">Twitter</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

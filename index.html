@@ -8,459 +8,545 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-ZQ7W13H899');
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shubham Agrawal</title>
+  <title>Shubham Agrawal — Software Engineer & Founder</title>
   <meta name="description"
-    content="My thoughts and ramblings about adventures in software development and entreprenuership.">
+    content="Software engineer, Android developer, and founder of iAstro. I write, build, and ship products from India.">
   <meta name="author" content="Shubham Agrawal">
 
   <!-- OG Tags -->
   <meta property="og:title" content="Shubham Agrawal">
   <meta property="og:description"
-    content="My thoughts and ramblings about adventures in software development and entreprenuership.">
+    content="Software engineer, Android developer, and founder of iAstro. I write, build, and ship products from India.">
   <meta property="og:image:secure_url"
-    content="https://raw.githubusercontent.com/shubh261096/portfolio/master/profile.png">
+    content="https://raw.githubusercontent.com/shubh261096/portfolio/master/images/profile.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.shubhamagrawal.com/">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@iagrawalshubham">
   <meta name="twitter:creator" content="@iagrawalshubham">
   <meta name="twitter:title" content="Shubham Agrawal">
   <meta name="twitter:description"
-    content="My thoughts and ramblings about adventures in software development and entreprenuership.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/shubh261096/portfolio/master/profile.png">
+    content="Software engineer, Android developer, and founder of iAstro.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/shubh261096/portfolio/master/images/profile.png">
 
-  <link rel="image_src" href="profile.png">
-
+  <link rel="image_src" href="images/profile.png">
   <link rel="canonical" href="https://www.shubhamagrawal.com/">
+  <link rel="icon" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
 
-  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/anchor.css" />
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="anchor.css" />
+  <style>
+    /* ===== Self-contained redesign CSS (independent of styles.css build) ===== */
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-2: #0b1220;
+      --border: rgba(148,163,184,0.15);
+      --border-strong: rgba(148,163,184,0.3);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --sky: #0ea5e9;
+      --cyan: #22d3ee;
+    }
 
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(1000px 500px at 85% -10%, rgba(14,165,233,0.10), transparent 60%),
+        radial-gradient(800px 450px at -10% 10%, rgba(34,211,238,0.08), transparent 60%),
+        var(--bg);
+      min-height: 100vh;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    ::selection { background: rgba(56,189,248,0.35); color: #fff; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 0 1.25rem; }
+    .section { padding: 2.75rem 0; }
+    .section-sm { padding: 1.25rem 0; }
+
+    /* ----- Nav ----- */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; padding: 1.5rem 0;
+    }
+    .brand {
+      font-size: 1.25rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--sky), var(--cyan));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .nav-list {
+      display: flex; align-items: center; gap: 1.5rem;
+      list-style: none; margin: 0; padding: 0;
+      font-size: .92rem; font-weight: 500;
+    }
+    .nav-list a { color: #cbd5e1; position: relative; transition: color .2s ease; }
+    .nav-list a::after {
+      content: ""; position: absolute; left: 0; bottom: -5px; height: 2px; width: 0;
+      background: linear-gradient(90deg, var(--sky), var(--cyan));
+      transition: width .25s ease;
+    }
+    .nav-list a:hover { color: #fff; }
+    .nav-list a:hover::after { width: 100%; }
+
+    /* ----- Hero ----- */
+    .hero { padding: 1.75rem 0 2.5rem; }
+    .hero-grid {
+      display: flex; flex-direction: column-reverse;
+      align-items: center; gap: 2.5rem;
+    }
+    @media (min-width: 768px) {
+      .hero-grid { flex-direction: row; justify-content: space-between; align-items: center; gap: 3rem; }
+    }
+    .hero-text { max-width: 560px; text-align: center; }
+    @media (min-width: 768px) { .hero-text { text-align: left; } }
+
+    .status-pill {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .35rem .8rem; border-radius: 9999px;
+      background: rgba(16,185,129,0.10);
+      border: 1px solid rgba(16,185,129,0.35);
+      color: #6ee7b7; font-size: .78rem; font-weight: 600;
+      letter-spacing: .01em;
+    }
+    .status-dot {
+      width: .5rem; height: .5rem; border-radius: 9999px;
+      background: #34d399; box-shadow: 0 0 0 0 rgba(52,211,153,0.7);
+      animation: ping 2s cubic-bezier(0,0,0.2,1) infinite;
+    }
+    @keyframes ping {
+      0%   { box-shadow: 0 0 0 0 rgba(52,211,153,0.55); }
+      80%  { box-shadow: 0 0 0 8px rgba(52,211,153,0); }
+      100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      line-height: 1.1; font-weight: 800;
+      margin: 1.1rem 0 0;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--sky), var(--cyan));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero .role { color: var(--muted); margin: .65rem 0 0; font-size: 1.05rem; }
+    .hero .lead { margin: 1.1rem 0 0; font-size: 1.05rem; line-height: 1.65; color: #cbd5e1; }
+    .hero .lead a { color: #38bdf8; }
+    .hero .lead a:hover { text-decoration: underline; }
+
+    .cta-row {
+      margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .75rem;
+      justify-content: center;
+    }
+    @media (min-width: 768px) { .cta-row { justify-content: flex-start; } }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .7rem 1.15rem; border-radius: .6rem;
+      font-weight: 600; font-size: .95rem; white-space: nowrap;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--sky), var(--cyan));
+      color: #0b1220; border: 1px solid transparent;
+      box-shadow: 0 8px 22px -10px rgba(34,211,238,0.55);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 28px -10px rgba(34,211,238,0.75); }
+    .btn-ghost {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.06); border-color: rgba(148,163,184,0.5); }
+
+    .socials { margin-top: 1.25rem; display: flex; gap: .35rem; justify-content: center; }
+    @media (min-width: 768px) { .socials { justify-content: flex-start; } }
+    .socials a {
+      display: inline-flex; padding: .35rem; border-radius: .5rem;
+      transition: background .2s ease;
+    }
+    .socials a:hover { background: rgba(255,255,255,0.06); }
+    .socials svg { width: 1.4rem; height: 1.4rem; fill: #94a3b8; transition: fill .2s ease; }
+    .socials a:hover svg { fill: #fff; }
+
+    .hero-image {
+      position: relative; border-radius: 1rem; overflow: hidden;
+      box-shadow: 0 30px 60px -25px rgba(2,6,23,0.8), 0 0 0 1px rgba(148,163,184,0.15);
+      flex-shrink: 0;
+    }
+    .hero-image img {
+      display: block; width: 16rem; height: 20rem; object-fit: cover;
+    }
+    .hero-image::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(14,165,233,0) 55%, rgba(14,165,233,0.18));
+    }
+
+    /* ----- Stack ----- */
+    .stack-label {
+      text-transform: uppercase; letter-spacing: .15em; font-size: .75rem;
+      color: var(--muted); margin: 0 0 .85rem;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .chip {
+      display: inline-flex; align-items: center;
+      padding: .4rem .8rem; border-radius: .5rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      color: #cbd5e1; font-size: .85rem;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .chip:hover { background: rgba(56,189,248,0.07); border-color: rgba(56,189,248,0.4); color: #fff; }
+
+    /* ----- Section heads ----- */
+    .section-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .section-title {
+      font-size: 1.5rem; font-weight: 700; margin: 0; position: relative;
+    }
+    .section-title .accent {
+      background: linear-gradient(135deg, var(--sky), var(--cyan));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .section-title::after {
+      content: ""; display: block; width: 38px; height: 3px; margin-top: .45rem;
+      background: linear-gradient(90deg, var(--sky), var(--cyan));
+      border-radius: 2px;
+    }
+    .section-link { color: var(--muted); font-size: .9rem; transition: color .2s ease; }
+    .section-link:hover { color: #fff; }
+
+    /* ----- Card grid ----- */
+    .grid-3 {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 900px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+    .card {
+      display: block;
+      background: linear-gradient(180deg, rgba(30,41,59,0.7), rgba(15,23,42,0.7));
+      border: 1px solid var(--border);
+      border-radius: .9rem; overflow: hidden;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56,189,248,0.4);
+      box-shadow: 0 18px 40px -20px rgba(14,165,233,0.45);
+    }
+    .card-img {
+      aspect-ratio: 3/2; background: var(--card-2); overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .card-img.contain { background: #1e293b; }
+    .card-img.contain img { object-fit: contain; padding: 1rem; }
+    .card:hover .card-img img { transform: scale(1.04); }
+
+    .card-body { padding: 1rem 1.1rem 1.2rem; }
+    .card-title { font-size: 1.05rem; font-weight: 600; margin: 0; color: #f1f5f9; }
+    .card-meta { font-size: .72rem; color: var(--muted); margin: .35rem 0 0; }
+    .card-desc { font-size: .88rem; color: #cbd5e1; margin: .55rem 0 0; line-height: 1.5; }
+
+    .tags { margin-top: .75rem; display: flex; flex-wrap: wrap; gap: .3rem; }
+    .tag {
+      font-size: .68rem; font-weight: 500; padding: .15rem .55rem;
+      border-radius: 9999px;
+      background: rgba(56,189,248,0.08);
+      color: #7dd3fc;
+      border: 1px solid rgba(56,189,248,0.22);
+    }
+
+    /* ----- Footer ----- */
+    .footer { padding: 2rem 0 3rem; }
+    .footer-inner {
+      border-top: 1px solid rgba(148,163,184,0.18);
+      padding-top: 2rem;
+      display: grid; gap: 1.75rem; grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) { .footer-inner { grid-template-columns: 1.6fr 1fr 1fr; } }
+    .footer h4 { font-size: .9rem; color: #f1f5f9; margin: 0 0 .8rem; }
+    .footer-blurb { font-size: .88rem; color: var(--muted); max-width: 22rem; line-height: 1.55; margin: .5rem 0 0; }
+    .footer-copy { font-size: .78rem; color: #64748b; margin-top: 1rem; }
+    .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; font-size: .88rem; }
+    .footer ul a { color: #cbd5e1; transition: color .2s ease; }
+    .footer ul a:hover { color: #fff; }
+
+    /* ----- Reveal ----- */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .status-dot { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
 
-<body class="bg-slate-900 text-gray-100">
-  <link itemprop="thumbnailUrl" href="https://raw.githubusercontent.com/shubh261096/portfolio/master/profile.png">
-
+<body>
+  <link itemprop="thumbnailUrl" href="https://raw.githubusercontent.com/shubh261096/portfolio/master/images/profile.png">
   <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
-    <link itemprop="url" href="https://raw.githubusercontent.com/shubh261096/portfolio/master/profile.png">
+    <link itemprop="url" href="https://raw.githubusercontent.com/shubh261096/portfolio/master/images/profile.png">
   </span>
 
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between"><a
-        href="https://shubhamagrawal.com">
-        <div
-          class="flex items-center bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-xl font-bold text-transparent">
-          Shubham Agrawal</div>
-      </a>
+  <!-- Nav -->
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="https://shubhamagrawal.com">Shubham Agrawal</a>
       <nav>
-        <ul class="flex gap-x-3 font-medium text-gray-200">
-          <li class="hover:text-white"><a
-              href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf"
-              target="_blank">Resume</a></li>
-          <li class="hover:text-white"><a href="https://medium.com/@iagrawalshubham" target="_blank">Blog</a></li>
-          <li class="hover:text-white"><a href="contact.html">Work With Me</a></li>
+        <ul class="nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#posts">Writing</a></li>
+          <li><a href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf" target="_blank">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-    </div>
+    </header>
   </div>
 
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="flex flex-col items-center md:flex-row md:justify-between md:gap-x-24">
-      <div class="shrink-0"><img class="h-80 max-w-64 rounded-lg" src="profile.png" alt="Profile image"
-          loading="lazy" /></div>
-      <div class="text-center md:text-left">
-        <h1 class="text-3xl font-bold pt-4">Hi there, I&#x27;m <span
-            class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Shubham</span></h1>
-        <p class="mt-6 text-xl leading-9">I&#x27;m a software engineer that writes about different topics around
-          startups, and android development. I&#x27;m working on my startup iAstro - India's Best Astrology Platform
-          <a href="https://shubh261096.github.io/iastro/" class="text-sky-400">iAstro</a>. Find out
-          more on my<!-- --> <a href="https://medium.com/@iagrawalshubham" class="text-sky-400">blog</a>. You can hire
-          me on <a href="https://www.upwork.com/freelancers/~01eaa05b17a38c1092" class="text-sky-400">Upwork</a>.
+  <!-- Hero -->
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="status-pill"><span class="status-dot"></span> Available for new work</span>
+        <h1>Hi, I&#x27;m <span class="accent">Shubham</span></h1>
+        <p class="role">Software Engineer · Android Developer · Founder of iAstro</p>
+        <p class="lead">
+          I build mobile apps, ship side projects, and write about startups and Android development.
+          Currently growing <a href="https://shubh261096.github.io/iastro/">iAstro</a> — India&#x27;s personalized
+          astrology platform. You can hire me on <a href="https://www.upwork.com/freelancers/~01eaa05b17a38c1092">Upwork</a>
+          or read my thoughts on my <a href="https://medium.com/@iagrawalshubham">blog</a>.
         </p>
-        <div class="mt-3 flex gap-1">
-          <a href="https://github.com/shubh261096" class="fill-white hover:fill-slate-500">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="h-10 mx-2">
-              <path
-                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-              </path>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="contact.html">
+            Work with me
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:1rem;height:1rem;">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/iagrawalshubham/" class="fill-white hover:fill-slate-500">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-10 mx-2">
-              <path
-                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
-              </path>
-            </svg>
+          <a class="btn btn-ghost"
+             href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf"
+             target="_blank">View Resume</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/shubh261096" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
           </a>
-          <a href="https://www.instagram.com/iagrawalshubham/" class="fill-white hover:fill-slate-500">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-10 mx-2">
-              <path
-                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-              </path>
-            </svg>
+          <a href="https://www.linkedin.com/in/iagrawalshubham/" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+          </a>
+          <a href="https://twitter.com/iagrawalshubham" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/iagrawalshubham/" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
           </a>
         </div>
       </div>
+      <div class="hero-image reveal">
+        <img src="images/profile.png" alt="Shubham Agrawal" loading="lazy" />
+      </div>
     </div>
   </div>
 
-  <!-- Recent Posts Open -->
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="mb-6 text-2xl font-bold">
-      <div class="flex items-baseline justify-between">
-        <div>Recent <span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Posts</span>
-        </div>
-        <div class="text-sm"><a href="https://medium.com/@iagrawalshubham">View all Posts →</a></div>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      <a class="hover:translate-y-1"
-        href="https://medium.com/@iagrawalshubham/server-driven-ui-android-implementation-e4ae865b10d0">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="server.png"
-              alt="Server-Driven UI Android Implementation" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Server-Driven UI Android Implementation</h2>
-            <div class="mt-1 text-xs text-gray-400">May 20, 2024</div>
-            <div class="mt-2 text-sm">Building Server Driven UI apps in all platforms.</div>
-          </div>
-        </div>
-      </a>
-      <a class="hover:translate-y-1"
-        href="https://medium.com/@iagrawalshubham/build-an-android-app-using-chatgpt-api-d31187b02acc">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="7.png"
-              alt="Android app using ChatGPT API" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Build an Android app using ChatGPT API</h2>
-            <div class="mt-1 text-xs text-gray-400">Feb 18, 2023</div>
-            <div class="mt-2 text-sm">Building an Android appplication using ChatGPT API</div>
-          </div>
-        </div>
-      </a>
-      <a class="hover:translate-y-1"
-        href="https://medium.com/swlh/dynamic-feature-module-integration-android-a315194a4801">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="1.png"
-              alt="Dynamic Feature Module Integration Android" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Dynamic Feature Module Integration Android</h2>
-            <div class="mt-1 text-xs text-gray-400">Oct 18, 2020</div>
-            <div class="mt-2 text-sm">Download on-demand feature module from play store</div>
-          </div>
-        </div>
-      </a>
+  <!-- Stack -->
+  <div class="wrap section-sm reveal">
+    <p class="stack-label">Tools I use</p>
+    <div class="chips">
+      <span class="chip">Android</span>
+      <span class="chip">Kotlin</span>
+      <span class="chip">Jetpack Compose</span>
+      <span class="chip">Java</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">PHP / CodeIgniter</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">Firebase</span>
+      <span class="chip">Git</span>
     </div>
   </div>
-  <!-- Recent Posts Close -->
 
-  <!-- Recent Projects Open -->
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="mb-6 text-2xl font-bold">
-      <div class="flex items-baseline justify-between">
-        <div>Recent <span
-            class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span>
-        </div>
-        <div class="text-sm"><a href="https://github.com/shubh261096">View all Projects →</a></div>
-      </div>
+  <!-- Recent Posts -->
+  <div class="wrap section reveal" id="posts">
+    <div class="section-head">
+      <h2 class="section-title">Recent <span class="accent">Posts</span></h2>
+      <a class="section-link" href="https://medium.com/@iagrawalshubham">View all →</a>
     </div>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      <a class="hover:translate-y-1" href="https://play.google.com/store/apps/details?id=com.iffelse.iastro">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2" style="position: relative; width: 100%;">
-            <img class="h-full w-full" src="iastro.png" alt="iAstro"
-              style="position: absolute; object-fit: contain; object-position: center;">
-          </div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">iAstro</h2>
-            <div class="mt-1 text-xs text-gray-400">Oct 14, 2024</div>
-            <div class="mt-2 text-sm">Personalised Astrology Solutions - Get first consultation free </div>
-          </div>
+    <div class="grid-3">
+      <a class="card" href="https://medium.com/@iagrawalshubham/server-driven-ui-android-implementation-e4ae865b10d0">
+        <div class="card-img"><img src="images/server.png" alt="Server-Driven UI Android Implementation" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Server-Driven UI Android Implementation</h3>
+          <p class="card-meta">May 20, 2024</p>
+          <p class="card-desc">Building server-driven UI apps across platforms.</p>
         </div>
       </a>
-      <a class="hover:translate-y-1" href="https://viaanafoundation.org">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2" style="position: relative; width: 100%;">
-            <img class="h-full w-full" src="viaana.png" alt="Viaana Foundation"
-              style="position: absolute; object-fit: contain; object-position: center;">
-          </div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Viaana Foundation</h2>
-            <div class="mt-1 text-xs text-gray-400">May 31, 2024</div>
-            <div class="mt-2 text-sm">Viaana Foundation is an NGO Organisation website</div>
-          </div>
+      <a class="card" href="https://medium.com/@iagrawalshubham/build-an-android-app-using-chatgpt-api-d31187b02acc">
+        <div class="card-img"><img src="images/chatgpt.png" alt="Android app using ChatGPT API" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Build an Android app using ChatGPT API</h3>
+          <p class="card-meta">Feb 18, 2023</p>
+          <p class="card-desc">Building an Android application using the ChatGPT API.</p>
         </div>
       </a>
-      <a class="hover:translate-y-1" href="https://ithiyoga.com">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="ithiyoga.png"
-              alt="Ithiyoga - Yoga Booking Website" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Ithiyoga | Yoga Booking Website</h2>
-            <div class="mt-1 text-xs text-gray-400">Sep 23, 2023</div>
-            <div class="mt-2 text-sm">Ithiyoga is a yoga personal one-to-one booking website</div>
-          </div>
-        </div>
-      </a>
-      <a class="hover:translate-y-1" href="https://lazyclick.in">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="8.png"
-              alt="Never Have I Ever" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Lazyclick</h2>
-            <div class="mt-1 text-xs text-gray-400">Feb 26, 2023</div>
-            <div class="mt-2 text-sm">Add WhatsApp Login to your app/website for FREE</div>
-          </div>
-        </div>
-      </a>
-      <a class="hover:translate-y-1" href="https://play.google.com/store/apps/details?id=com.lazyclick.neverhaveiever">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="5.png"
-              alt="Never Have I Ever" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Never Have I Ever | Party Game</h2>
-            <div class="mt-1 text-xs text-gray-400">Jan 05, 2023</div>
-            <div class="mt-2 text-sm">Play with your friends asking from thousands of questions</div>
-          </div>
-        </div>
-      </a>
-      <a class="hover:translate-y-1" href="https://play.google.com/store/apps/details?id=com.aps.apszone">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="6.png"
-              alt="Apszone school application" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Apszone | School application</h2>
-            <div class="mt-1 text-xs text-gray-400">Oct 26, 2020</div>
-            <div class="mt-2 text-sm">Apszone is a child company of Apsdeoria (Agrawal Public School)</div>
-          </div>
-        </div>
-      </a>
-      <a class="hover:translate-y-1" href="https://pickbee.com">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="9.png"
-              alt="Apszone school application" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Pickbee</h2>
-            <div class="mt-1 text-xs text-gray-400">21 December, 2017</div>
-            <div class="mt-2 text-sm">Online platform for ordering and delivery from local stores</div>
-          </div>
+      <a class="card" href="https://medium.com/swlh/dynamic-feature-module-integration-android-a315194a4801">
+        <div class="card-img"><img src="images/dynamic-feature-module.png" alt="Dynamic Feature Module Integration" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Dynamic Feature Module Integration</h3>
+          <p class="card-meta">Oct 18, 2020</p>
+          <p class="card-desc">Download on-demand feature modules from Play Store.</p>
         </div>
       </a>
     </div>
   </div>
-  <!-- Recent Projects Close -->
 
-  <!-- Cerification Open -->
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="mb-6 text-2xl font-bold">
-      <div class="flex items-baseline justify-between">
-        <div><span class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Certification</span>
-        </div>
-      </div>
+  <!-- Recent Projects -->
+  <div class="wrap section reveal" id="projects">
+    <div class="section-head">
+      <h2 class="section-title">Recent <span class="accent">Projects</span></h2>
+      <a class="section-link" href="https://github.com/shubh261096">View all →</a>
     </div>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      <a class="hover:translate-y-1"
-        href="https://www.credential.net/c094e535-1af5-40cd-9841-426ed3496b6f?key=9d049b20cff848a3f0ebef94e64c2571304f8eab993a83b14a705c4b289adb14">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="certificate.png"
-              alt="Ithiyoga - Yoga Booking Website" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Google Certifed | Android Developer</h2>
-            <div class="mt-1 text-xs text-gray-400">June 08, 2018</div>
-            <div class="mt-2 text-sm">The Associate Android Developer Certification is a performance-based exam where
-              developers write real apps to show their skills. This certification corresponds to the skills that an
-              entry-level Android developer is expected to have.
-            </div>
-          </div>
+    <div class="grid-3">
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.iffelse.iastro">
+        <div class="card-img contain"><img src="images/iastro.png" alt="iAstro"></div>
+        <div class="card-body">
+          <h3 class="card-title">iAstro</h3>
+          <p class="card-meta">Oct 14, 2024</p>
+          <p class="card-desc">Personalized astrology consultations — first session free.</p>
+          <div class="tags"><span class="tag">Android</span><span class="tag">Kotlin</span><span class="tag">Compose</span></div>
         </div>
       </a>
-      <!-- <a class="hover:translate-y-1"
-        href="https://www.amazon.in/Cetaphil-Cleanser-Oily-Skin-125ml/dp/B01CCGW732?pd_rd_w=KRENf&content-id=amzn1.sym.fc4c59dc-8aef-451b-bf52-5770bcae6837&pf_rd_p=fc4c59dc-8aef-451b-bf52-5770bcae6837&pf_rd_r=JNTM0H775ZKFZWDXY26P&pd_rd_wg=Tc2o2&pd_rd_r=341b2605-0603-437a-8879-db4798544a7a&pd_rd_i=B01CCGW732&th=1&linkCode=ll1&tag=lazyclick-21&linkId=3d97769a7781af04b59a81f74aae9ac7&language=en_IN&ref_=as_li_ss_tl">
-        <div class="overflow-hidden rounded-md bg-slate-800">
-          <div class="aspect-w-3 aspect-h-2"><img class="h-full w-full object-cover object-center" src="certificate.png"
-              alt="Ithiyoga - Yoga Booking Website" loading="lazy" /></div>
-          <div class="px-3 pt-4 pb-6 text-center">
-            <h2 class="text-xl font-semibold">Google Certifed | Android Developer</h2>
-            <div class="mt-1 text-xs text-gray-400">June 08, 2018</div>
-            <div class="mt-2 text-sm">The Associate Android Developer Certification is a performance-based exam where
-              developers write real apps to show their skills. This certification corresponds to the skills that an
-              entry-level Android developer is expected to have.
-            </div>
-          </div>
+      <a class="card" href="https://viaanafoundation.org">
+        <div class="card-img contain"><img src="images/viaana.png" alt="Viaana Foundation"></div>
+        <div class="card-body">
+          <h3 class="card-title">Viaana Foundation</h3>
+          <p class="card-meta">May 31, 2024</p>
+          <p class="card-desc">Non-profit organization website.</p>
+          <div class="tags"><span class="tag">Web</span><span class="tag">PHP</span><span class="tag">NGO</span></div>
         </div>
-      </a> -->
+      </a>
+      <a class="card" href="https://ithiyoga.com">
+        <div class="card-img"><img src="images/ithiyoga.png" alt="Ithiyoga" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Ithiyoga · Yoga Booking</h3>
+          <p class="card-meta">Sep 23, 2023</p>
+          <p class="card-desc">1-on-1 yoga session booking platform.</p>
+          <div class="tags"><span class="tag">Web</span><span class="tag">Booking</span><span class="tag">PHP</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://lazyclick.in">
+        <div class="card-img"><img src="images/lazyclick.png" alt="Lazyclick" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Lazyclick</h3>
+          <p class="card-meta">Feb 26, 2023</p>
+          <p class="card-desc">Free WhatsApp login for your app or website.</p>
+          <div class="tags"><span class="tag">SaaS</span><span class="tag">Auth</span><span class="tag">WhatsApp</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.lazyclick.neverhaveiever">
+        <div class="card-img"><img src="images/never-have-i-ever.png" alt="Never Have I Ever" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Never Have I Ever · Party Game</h3>
+          <p class="card-meta">Jan 5, 2023</p>
+          <p class="card-desc">Play with friends from thousands of questions.</p>
+          <div class="tags"><span class="tag">Android</span><span class="tag">Game</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.aps.apszone">
+        <div class="card-img"><img src="images/apsdeoria.png" alt="Apszone school application" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Apszone · School App</h3>
+          <p class="card-meta">Oct 26, 2020</p>
+          <p class="card-desc">School management system app for Agrawal Public School.</p>
+          <div class="tags"><span class="tag">Android</span><span class="tag">EdTech</span></div>
+        </div>
+      </a>
+      <a class="card" href="https://pickbee.com">
+        <div class="card-img"><img src="images/pickbee.png" alt="Pickbee" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Pickbee</h3>
+          <p class="card-meta">Dec 21, 2017</p>
+          <p class="card-desc">Order &amp; delivery platform for local stores.</p>
+          <div class="tags"><span class="tag">Marketplace</span><span class="tag">Logistics</span></div>
+        </div>
+      </a>
     </div>
   </div>
-  <!-- Recent Projects Close -->
 
-  <!-- Recent Projects Open -->
-  <!-- <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="mb-6 text-2xl font-bold">
-      <div class="flex items-baseline justify-between">
-        <div>Recent <span
-            class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Projects</span></div>
-        <div class="text-sm"><a href="https://github.com/shubh261096">View all projects →</a></div>
+  <!-- Certification -->
+  <div class="wrap section reveal">
+    <div class="section-head">
+      <h2 class="section-title"><span class="accent">Certification</span></h2>
+    </div>
+    <div class="grid-3">
+      <a class="card"
+         href="https://www.credential.net/c094e535-1af5-40cd-9841-426ed3496b6f?key=9d049b20cff848a3f0ebef94e64c2571304f8eab993a83b14a705c4b289adb14">
+        <div class="card-img"><img src="images/certificate.png" alt="Google Certified Android Developer" loading="lazy"></div>
+        <div class="card-body">
+          <h3 class="card-title">Google Certified · Android Developer</h3>
+          <p class="card-meta">June 8, 2018</p>
+          <p class="card-desc">Performance-based exam where developers write real apps to demonstrate entry-level Android engineering skills.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="wrap footer">
+    <div class="footer-inner">
+      <div>
+        <div class="brand">Shubham Agrawal</div>
+        <p class="footer-blurb">Building products at the intersection of mobile, web, and AI. Based in India. Open to collaborations.</p>
+        <p class="footer-copy">© <span id="year">2024</span> Shubham Agrawal. All rights reserved.</p>
       </div>
-    </div>
-    <div class="my-16 sm:my-20">
-      <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-        <li class="group relative flex flex-col items-start">
-          <div
-            class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-            <img alt="Ruru Logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-              class="h-8 w-8 rounded-full" src="ithiyoga.png" style="color:transparent" />
-          </div>
-          <h2 class="mt-6 text-base font-semibold text-slate-800 dark:text-slate-100">
-            <div
-              class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl">
-            </div><a href="https://ithiyoga.com" target="_blank"><span
-                class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                class="relative z-10">Ithiyoga | Yoga Booking Website</span></a>
-          </h2>
-          <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">Ithiyoga is a yoga personal
-            one-to-one booking website</p>
-          <p
-            class="relative z-10 mt-6 flex text-sm font-medium text-slate-400 transition group-hover:text-cyan-500 dark:text-slate-200">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">
-              <path
-                d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-                fill="currentColor"></path>
-            </svg><span class="ml-2">https://ithiyoga.com</span>
-          </p>
-        </li>
-        <li class="group relative flex flex-col items-start">
-          <div
-            class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-            <img alt="MFM Agreement Logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-              class="h-8 w-8 rounded-full" src="8.png" style="color:transparent" />
-          </div>
-          <h2 class="mt-6 text-base font-semibold text-slate-800 dark:text-slate-100">
-            <div
-              class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl">
-            </div><a href="https://lazyclick.in" target="_blank"><span
-                class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                class="relative z-10">Lazyclick</span></a>
-          </h2>
-          <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">Add WhatsApp Login to your
-            app/website for FREE</p>
-          <p
-            class="relative z-10 mt-6 flex text-sm font-medium text-slate-400 transition group-hover:text-cyan-500 dark:text-slate-200">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">
-              <path
-                d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-                fill="currentColor"></path>
-            </svg><span class="ml-2">https://lazyclick.in</span>
-          </p>
-        </li>
-        <li class="group relative flex flex-col items-start">
-          <div
-            class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-            <img alt="OneEPK Logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-              class="h-8 w-8 rounded-full" src="5.png" style="color:transparent" />
-          </div>
-          <h2 class="mt-6 text-base font-semibold text-slate-800 dark:text-slate-100">
-            <div
-              class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl">
-            </div><a href="https://play.google.com/store/apps/details?id=com.iffelse.neverhaveiever" target="_blank"><span
-                class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                class="relative z-10">Never Have I Ever | Party Game</span></a>
-          </h2>
-          <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">Play with your friends asking from
-            thousands of questions</p>
-          <p
-            class="relative z-10 mt-6 flex text-sm font-medium text-slate-400 transition group-hover:text-cyan-500 dark:text-slate-200">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">
-              <path
-                d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-                fill="currentColor"></path>
-            </svg><span class="ml-2">https://play.google.com/store/apps/details?id=com.iffelse.neverhaveiever</span>
-          </p>
-        </li>
-        <li class="group relative flex flex-col items-start">
-          <div
-            class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-            <img alt="egami Logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-              class="h-8 w-8 rounded-full" src="6.png" style="color:transparent" />
-          </div>
-          <h2 class="mt-6 text-base font-semibold text-slate-800 dark:text-slate-100">
-            <div
-              class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl">
-            </div><a href="https://play.google.com/store/apps/details?id=com.aps.apszone" target="_blank"><span
-                class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                class="relative z-10">Apszone | School application</span></a>
-          </h2>
-          <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">Apszone is a child company of Apsdeoria (Agrawal Public School). An app for School Management System.</p>
-          <p
-            class="relative z-10 mt-6 flex text-sm font-medium text-slate-400 transition group-hover:text-cyan-500 dark:text-slate-200">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">
-              <path
-                d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-                fill="currentColor"></path>
-            </svg><span class="ml-2">https://play.google.com/store/apps/details?id=com.aps.apszone</span>
-          </p>
-        </li>
-        <li class="group relative flex flex-col items-start">
-          <div
-            class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-slate-800/5 ring-1 ring-slate-900/5 dark:border dark:border-slate-700/50 dark:bg-slate-800 dark:ring-0">
-            <img alt="ifoundthis Logo" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-              class="h-8 w-8 rounded-full" src="9.png" style="color:transparent" />
-          </div>
-          <h2 class="mt-6 text-base font-semibold text-slate-800 dark:text-slate-100">
-            <div
-              class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl">
-            </div><a href="https://pickbee.com/" target="_blank"><span
-                class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span
-                class="relative z-10">Pickbee</span></a>
-          </h2>
-          <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">Online platform for ordering and delivery from local stores</p>
-          <p
-            class="relative z-10 mt-6 flex text-sm font-medium text-slate-400 transition group-hover:text-cyan-500 dark:text-slate-200">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">
-              <path
-                d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-                fill="currentColor"></path>
-            </svg><span class="ml-2">https://pickbee.com/</span>
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div> -->
-  <!-- Recent Projects Close -->
-
-  <div class="mx-auto max-w-screen-lg px-3 py-6">
-    <div class="border-t border-gray-600 pt-5 text-sm text-gray-200 md:flex text-center">
-      <div class="flex-1 md:text-left">©<!-- --> <a class="hover:underline" href="https://shubhamagrawal.com">Shubham
-          Agrawal</a> <!-- -->2024</div>
-      <div class="flex-1 md:text-right">
-        <a class="hover:underline" href="mailto:sa159871@gmail.com">Email</a>
-         <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://amzn.to/3QNUUH9">Amazon Wireless Console</a>
-        <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://amzn.to/3QQkawf">Amazon Board Game</a>
-        <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://linktr.ee/iagrawalshubham">Linktree</a>
-        <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://github.com/shubh261096">GitHub</a>
-        <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://www.linkedin.com/in/iagrawalshubham/">LinkedIn</a>
-        <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://www.instagram.com/iagrawalshubham/" rel="nofollow">Instagram</a>
-        <!-- -->|<!-- -->
-        <a class="hover:underline" href="https://twitter.com/iagrawalshubham">Twitter</a>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#posts">Writing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://linktr.ee/iagrawalshubham">Linktree</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="mailto:sa159871@gmail.com">Email</a></li>
+          <li><a href="https://github.com/shubh261096">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/iagrawalshubham/">LinkedIn</a></li>
+          <li><a href="https://twitter.com/iagrawalshubham">Twitter</a></li>
+          <li><a href="https://www.instagram.com/iagrawalshubham/" rel="nofollow">Instagram</a></li>
+        </ul>
       </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
 </body>
 
 </html>
