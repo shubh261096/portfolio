@@ -60,7 +60,7 @@
         <ul class="nav-list">
           <li><a href="#projects">Projects</a></li>
           <li><a href="#posts">Writing</a></li>
-          <li><a href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf" target="_blank">Resume</a></li>
+          <li><a href="assets/pdf/Shubham_Agrawal_Resume.pdf" data-resume target="_blank">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -88,7 +88,7 @@
             </svg>
           </a>
           <a class="btn btn-ghost"
-             href="https://docs.google.com/gview?url=https://github.com/shubh261096/portfolio/raw/master/Shubham_Agrawal_Resume.pdf"
+             href="assets/pdf/Shubham_Agrawal_Resume.pdf" data-resume
              target="_blank">View Resume</a>
         </div>
         <div class="socials">
@@ -305,6 +305,7 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
+  <script src="js/resume.js"></script>
 </body>
 
 </html>
